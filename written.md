@@ -19,7 +19,7 @@
    c = a.copy()
    a.append(4)
    print(b, c)
-  - A. `[1, 2, 3, 4]  [1, 2, 3, 4]`
+   - A. `[1, 2, 3, 4]  [1, 2, 3, 4]`
    - B. `[1, 2, 3, 4]  [1, 2, 3]`
    - C. `[1, 2, 3]  [1, 2, 3, 4]`
    - D. `[1, 2, 3]  [1, 2, 3]`
@@ -70,7 +70,7 @@
    d = {"a": 1, "b": 2}
    d = {k: v for k, v in d.items() if v > 1}
    print(d)
-    - A. `{'a': 1, 'b': 2}`
+   - A. `{'a': 1, 'b': 2}`
    - B. `{'b': 2}`
    - C. `{1: 'a', 2: 'b'}`
    - D. `SyntaxError: invalid syntax`
@@ -78,7 +78,7 @@
    import json
    s = json.dumps({"name": "张三", "age": 18})
    print(type(s))
-  - A. `<class 'dict'>`
+   - A. `<class 'dict'>`
    - B. `<class 'str'>`
    - C. `<class 'bytes'>`
    - D. `TypeError: dump() missing 1 required positional argument: 'fp'`
@@ -92,5 +92,11 @@
    - B. 只输出 `6`
    - C. 只输出 `None`
    - D. 输出 `6` 两次
+10. 以下代码中，`user.get("city")` 和 `user["city"]` 的区别是什么？
+    user = {"name": "张三", "age": 18}
+    - A. 没有区别，两者行为完全一致
+    - B. `get()` 返回默认值 `None`，`[]` 抛出 `KeyError`
+    - C. `get()` 抛出 `KeyError`，`[]` 返回 `None`
+    - D. `get()` 只能用于字符串键，`[]` 可以用于任意键
 
-'1.B 2.B 3.B 4.B 5.B 6.B 7.B 8.B 9.B
+'1.B 2.B 3.B 4.B 5.B 6.B 7.B 8.B 9.B 10.B
