@@ -146,3 +146,29 @@ logs = [
       count(a)=count.get(a,0)+1
    print(count)
  3.len(logs)是显示列表中字典的个数，不能查看到字典内部的信息，可以用for循环遍历。  
+
+ ### 第 3 题：异常处理设计
+
+Day_10 中你写过 `safe_int(s)` 函数：能转就返回整数，不能转就返回 `None`。
+
+现在请你设计一个 `safe_divide(a, b)` 函数：
+
+- 输入两个字符串 `a` 和 `b`
+- 尝试将它们转为数字并计算 `a / b`
+- 如果转换失败（`ValueError`）或除数为零（`ZeroDivisionError`），返回 `None`
+- 否则返回商（`float`）
+
+请写出函数代码，并说明：为什么这里用 `try/except` 比先用 `if` 判断再计算更好？
+
+（在此作答）
+
+ 
+def safe_divide(a,b)
+    try:
+        n1=float(a)
+        n2=float(b)
+        c=n1/n2
+        return c
+    except(ValueError or ZeroDivisionError):
+        return None
+此题条件比较多，若用if函数,代码会很长，因此用“try/except”  较为妥当。  
