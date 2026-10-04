@@ -66,6 +66,14 @@
    class Dog(Animal):
        def speak(self):
            print(f"{self.name}: woof")
+7. 以下代码中，`d` 的值是什么？
+   d = {"a": 1, "b": 2}
+   d = {k: v for k, v in d.items() if v > 1}
+   print(d)
+    - A. `{'a': 1, 'b': 2}`
+   - B. `{'b': 2}`
+   - C. `{1: 'a', 2: 'b'}`
+   - D. `SyntaxError: invalid syntax`
 
 
-'1.B 2.B 3.B 4.B 5.B 6.B
+'1.B 2.B 3.B 4.B 5.B 6.B 7.B
