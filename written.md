@@ -74,6 +74,14 @@
    - B. `{'b': 2}`
    - C. `{1: 'a', 2: 'b'}`
    - D. `SyntaxError: invalid syntax`
+8. 依次执行以下代码，输出是什么？
+   import json
+   s = json.dumps({"name": "张三", "age": 18})
+   print(type(s))
+  - A. `<class 'dict'>`
+   - B. `<class 'str'>`
+   - C. `<class 'bytes'>`
+   - D. `TypeError: dump() missing 1 required positional argument: 'fp'`
 
 
-'1.B 2.B 3.B 4.B 5.B 6.B 7.B
+'1.B 2.B 3.B 4.B 5.B 6.B 7.B 8.B
