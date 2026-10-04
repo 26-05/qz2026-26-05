@@ -14,7 +14,8 @@
    - C. `[1]`
    - D. `TypeError: 'list' object is not callable`
 2. 依次执行以下代码，输出是什么？
-   a = [1, 2, 3]
+
+    a = [1, 2, 3]
    b = a
    c = a.copy()
    a.append(4)
@@ -66,6 +67,13 @@
    class Dog(Animal):
        def speak(self):
            print(f"{self.name}: woof")
+
+   d = Dog("Rex")
+   d.speak()
+   - A. `...`
+   - B. `Rex: woof`
+   - C. 输出两行：`...` 和 `Rex: woof`
+   - D. `AttributeError: 'Dog' object has no attribute '__init__'`
 7. 以下代码中，`d` 的值是什么？
    d = {"a": 1, "b": 2}
    d = {k: v for k, v in d.items() if v > 1}
