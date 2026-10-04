@@ -23,5 +23,18 @@
    - B. `[1, 2, 3, 4]  [1, 2, 3]`
    - C. `[1, 2, 3]  [1, 2, 3, 4]`
    - D. `[1, 2, 3]  [1, 2, 3]`
+3. 依次执行以下代码，输出是什么？
+   try:
+       x = 1 / 0
+   except ZeroDivisionError:
+       print("A")
+   else:
+       print("B")
+   finally:
+       print("C")
+   - A. 只输出 `C`
+   - B. 输出 `A` 和 `C`
+   - C. 输出 `B` 和 `C`
+   - D. 输出 `A`、`B` 和 `C`
 
-'1.B 2.B
+'1.B 2.B 3.B
