@@ -82,6 +82,15 @@
    - B. `<class 'str'>`
    - C. `<class 'bytes'>`
    - D. `TypeError: dump() missing 1 required positional argument: 'fp'`
+9. 依次执行以下代码，输出是什么？
+   def f(x):
+       return x + 1
 
+   f(5)
+   print(f(5))
+   - A. 输出两行：`None` 和 `6`
+   - B. 只输出 `6`
+   - C. 只输出 `None`
+   - D. 输出 `6` 两次
 
-'1.B 2.B 3.B 4.B 5.B 6.B 7.B 8.B
+'1.B 2.B 3.B 4.B 5.B 6.B 7.B 8.B 9.B
