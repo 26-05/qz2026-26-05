@@ -44,4 +44,15 @@
    - B. `7  5`
    - C. `5  5`
    - D. `5  7`
-'1.B 2.B 3.B 4.B
+5. 以下代码的执行结果是？
+   for i in range(5):
+       if i == 3:
+           break
+   else:
+       print("done")
+   print("end")
+   - A. 输出 `done` 和 `end`
+   - B. 只输出 `end`
+   - C. 只输出 `done`
+   - D. 什么都不输出
+'1.B 2.B 3.B 4.B 5.B
