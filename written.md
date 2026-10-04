@@ -119,4 +119,30 @@ import copy
 c = copy.deepcopy(a)
 （在此作答）
 a是原始列表，b是a的浅拷贝，c是a的深拷贝。b变为[[1,2,99],[3,4]],c变为[[1,2],[3,4]],原因：列表为可变对象，a[0]代表在a列表中第一个元素后加99，a和b共用一个子列表，b也会跟着a变，c为深拷贝,有自己独立的子列表副本，因此不会随a改变。
+### 第 2 题：字典与列表的综合应用
 
+以下代码模拟"从日志中提取用户信息"，请回答：
+logs = [
+    {"user": "张三", "action": "login", "level": "INFO"},
+    {"user": "李四", "action": "logout", "level": "INFO"},
+    {"user": "张三", "action": "error", "level": "ERROR"},
+    {"user": "王五", "action": "login", "level": "INFO"},
+    {"user": "李四", "action": "error", "level": "ERROR"},
+]
+1. 写出表达式，找出所有 `level` 为 `"ERROR"` 的日志（返回字典列表）。
+2. 写出表达式，统计每个用户出现了几次（返回字典，键为用户名，值为次数）。
+3. 解释为什么第 2 问不能直接用 `len(logs)` 得到结果，需要什么遍历结构？
+
+（在此作答）
+1.error_logs=()
+  for log in logs:
+      if log("level")=="ERROR"
+        error_logs.append(log)
+  return error_logs  
+
+2.count={}
+  for log in logs:
+      a=log("user")
+      count(a)=count.get(a,0)+1
+   print(count)
+ 3.len(logs)是显示列表中字典的个数，不能查看到字典内部的信息，可以用for循环遍历。  
