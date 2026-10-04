@@ -55,4 +55,17 @@
    - B. 只输出 `end`
    - C. 只输出 `done`
    - D. 什么都不输出
-'1.B 2.B 3.B 4.B 5.B
+6. 依次执行以下代码，输出是什么？
+   class Animal:
+       def __init__(self, name):
+           self.name = name
+
+       def speak(self):
+           print("...")
+
+   class Dog(Animal):
+       def speak(self):
+           print(f"{self.name}: woof")
+
+
+'1.B 2.B 3.B 4.B 5.B 6.B
