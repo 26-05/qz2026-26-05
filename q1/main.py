@@ -16,6 +16,15 @@ def analyze_log(filepath: str) -> dict:
     # 打开文件
     with open(filepath, 'r', encoding='utf-8') as f:
         for line in f:
-            pass 
+            # 跳过空行
+            line = line.strip()
+            if not line:
+                continue
+
+    # 解析 JSON，失败不报错
+            try:
+                my_dict = json.loads(line)
+            except json.JSONDecodeError:
+                continue
             
     return result
