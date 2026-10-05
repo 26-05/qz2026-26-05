@@ -8,4 +8,14 @@ def analyze_log(filepath: str) -> dict:
         "by_user": {},
         "last_error": None
     }
+    
+    # 检查文件存不存在
+    if not os.path.exists(filepath):
+        return result
+        
+    # 打开文件
+    with open(filepath, 'r', encoding='utf-8') as f:
+        for line in f:
+            pass 
+            
     return result
