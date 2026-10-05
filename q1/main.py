@@ -21,10 +21,18 @@ def analyze_log(filepath: str) -> dict:
             if not line:
                 continue
 
-    # 解析 JSON，失败不报错
+            # 解析 JSON，失败不报错
             try:
                 my_dict = json.loads(line)
             except json.JSONDecodeError:
                 continue
-            
+            # 统计总数
+            result["total"] += 1
+
+            # 统计 level，并记录最后一条 ERROR 的 message
+            level = my_dict.get("level")
+            if level:
+                result["by_level"][level] = result["by_level"].get(level, 0) + 1
+                if level == "ERROR":
+                    result["last_error"] = my_dict.get("message")
     return result
