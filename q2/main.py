@@ -29,3 +29,5 @@ class UserManager:
             del self.roster[user_id]
             return True
         return False
+    def list_users(self)：
+        return list(self.roster.values())
