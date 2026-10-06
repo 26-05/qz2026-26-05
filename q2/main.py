@@ -31,3 +31,12 @@ class UserManager:
         return False
     def list_users(self)：
         return list(self.roster.values())
+    
+    def save_to_json(self, filepath):
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(self.roster, f, ensure_ascii=False, indent=4)
+
+
+
+
+
