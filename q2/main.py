@@ -35,7 +35,17 @@ class UserManager:
     def save_to_json(self, filepath):
         with open(filepath, 'w', encoding='utf-8') as f:
             json.dump(self.roster, f, ensure_ascii=False, indent=4)
-
+    
+    def load_from_json(self, filepath):
+        # 如果文件不存在，直接返回，不报错
+        if not os.path.exists(filepath):
+            return
+    
+        with open(filepath, 'r', encoding='utf-8') as f:
+            self.roster = json.load(f)         
+            if self.roster:                
+                all_ids = [int(k) for k in self.roster.keys()]
+                self.id_counter = max(all_ids) + 1
 
 
 
